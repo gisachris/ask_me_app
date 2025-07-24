@@ -9,7 +9,8 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, "./dist"),
-        filename: "app-bundle.js"
+        filename: "app-bundle.js",
+        clean: true
     },
     resolve: {
         extensions: ['ts', 'tsx', 'js']
@@ -23,7 +24,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: ["css-loader", "style-loader"]
+                loader: ["style-loader", "css-loader", "postcss-loader"]
             },
             {
                 test: /\.{png | webp | jpe?g | gif}$/i,
