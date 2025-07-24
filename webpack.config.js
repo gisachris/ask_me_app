@@ -24,11 +24,11 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: ["style-loader", "css-loader", "postcss-loader"]
+                use: ["style-loader", "css-loader", "postcss-loader"]
             },
             {
-                test: /\.{png | webp | jpe?g | gif}$/i,
-                loader: "file-loader"
+                test: /\.(png|webp|jpe?g|gif)$/i,
+                type: "asset/resource"
             }
         ]
     },
